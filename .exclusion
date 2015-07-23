@@ -1,0 +1,15 @@
+.*
+*.sh
+*.md
+*.yml
+*.xml
+*.json
+*.php
+config.rb
+artisan
+composer.*
+gulpfile.js
+node_modules
+database
+tests
+public/bower_components
