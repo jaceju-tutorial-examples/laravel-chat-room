@@ -10,8 +10,6 @@ require('laravel-elixir-clean');
 require('laravel-elixir-useref');
 
 elixir(function (mix) {
-    var port = 8000;
-
     mix.clean()
         .sass('*.scss')
         .wiredep()
@@ -20,13 +18,11 @@ elixir(function (mix) {
 
     if (elixir.config.production) {
         mix.useref({ src: false })
-            .version(['js/*.js', 'css/*.css']);
+            .version(['js/*.js', 'css/*.css'])
     } else {
-        mix.serve({
-                port: port
-            }).browserSync(null, {
-                proxy: 'localhost:' + port,
-                reloadDelay: 2000
-            });
+        mix.browserSync(null, {
+            proxy: 'chat-room.app',
+            reloadDelay: 2000
+        });
     }
 });
