@@ -4,26 +4,30 @@ html, body {
   height: 100%;
 }
 
-body.welcome {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: table;
-  font-weight: 100;
-  font-family: 'Lato', Arial, sans-serif;
+// 訊息列表框
+#chat-room {
+  border: 1px solid #ccc;
+  height: 20rem;
+  padding: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
 
-  .container {
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+  // 單則訊息
+  .message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// 輸入訊息的表單
+#send-message {
+  margin-top: -1px;
+
+  .input-group-addon {
+    border-top-left-radius: 0;
   }
 
-  .content {
-    text-align: center;
-    display: inline-block;
-  }
-
-  .title {
-    font-size: 96px;
+  .input-group-btn > .btn {
+    border-top-right-radius: 0;
   }
 }
