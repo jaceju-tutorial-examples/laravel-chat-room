@@ -11,5 +11,10 @@
     "laravel-elixir-sync": "*",
     "laravel-elixir-useref": "*",
     "laravel-elixir-wiredep": "*"
+  },
+  "dependencies": {
+    "express": "^4.13.1",
+    "ioredis": "^1.7.0",
+    "socket.io": "^1.3.6"
   }
 }
